@@ -1,10 +1,11 @@
+
 #!/bin/sh
 
 # Add all modified files
 git add .
 
 # Check pre-commits
-pre-commit run --all-files
+pre-commit run
 if [ $? -ne 0 ]; then
     echo "Pre-commit checks failed. Please fix the issues and try again."
     exit 1
